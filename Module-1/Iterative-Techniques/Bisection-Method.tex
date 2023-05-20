@@ -1,0 +1,27 @@
+\newpage
+\chapter{Bisection Method}
+
+\section{Bisection Method}
+
+\begin{enumerate}
+
+    \item Identify the interval $[a,b]$ that contains the root of the function $f(x)$. This means finding two points a and b such that $f(a)$ and $f(b)$ have opposite signs (i.e., $f(a) * f(b) < 0$). This interval can be obtained either graphically or algebraically.
+
+    \item Divide the interval $[a,b]$ into two equal sub-intervals by finding the midpoint
+    \begin{equation*}
+        c = \frac{a + b}{2}
+    \end{equation*}
+
+    \item Evaluate the function $f(c)$ at the midpoint c. If $f(c) = 0$, then c is the root of the function and we are done.
+
+    \item If $f(c)$ has the same sign as $f(a)$, then the root must lie in the interval $[c,b]$. So, set $a = c$ and go to step 2.
+
+    \item If $f(c)$ has the same sign as $f(b)$, then the root must lie in the interval $[a,c]$. So, set $b = c$ and go to step 2.
+
+    \item Repeat steps $2-5$ until you obtain an interval $[a,b]$ that is small enough or until $f(c)$ is sufficiently close to zero.
+
+    \item The final value of c obtained is the approximate root of the function $f(x)$ within the interval $[a,b]$.
+
+\end{enumerate}
+
+\mynote{The Bolzano method guarantees convergence to a root of the function as long as the function is continuous on the interval $[a,b]$. However, it does not guarantee uniqueness of the root, nor does it give an estimate of the error in the approximation.}

@@ -1,0 +1,40 @@
+\newpage
+
+\chapter{Finite Differences}
+
+\section{Finite Differences}
+
+\begin{enumerate}
+  \item Finite difference is a method of approximating the derivative of a function at a point by using the function values at nearby points.
+  \item The finite difference method is used to solve ordinary differential equations that have conditions imposed on the boundary rather than at the initial point.
+  \item The finite difference method is used to solve partial differential equations.
+
+    \mynote{
+        \begin{enumerate}
+        \item The finite difference method is used to solve ordinary differential equations that have conditions imposed on the boundary rather than at the initial point.
+        \item The finite difference method is used to solve partial differential equations.
+        \end{enumerate}
+    }
+
+    \begin{equation*}
+        y = f(x)\\
+    \end{equation*}
+    Consider,
+    \[ x : (a), (a+h), (a+2h), (a+3h), .... (a+nh) \]
+    \[y : y_0, y_1, y_2, y_3, .... y_n\]
+
+        \[y_1 = f(a+h)\]
+        \[y_2 = f(a+2h)\]
+        \[y_3 = f(a+3h)\]
+        \mybox[noteshift=0.5cm,colback=lime!40]{\[y_n = f(a+nh)\]}
+
+        Where,\\
+        \[x \rightarrow Arguments\]
+        \[y \rightarrow Entries\]
+        \[h \rightarrow Difference\ Interval\]
+\end{enumerate}
+
+\input{../Module-1/Finite-Differences/Forward-Difference.tex}
+\input{../Module-1/Finite-Differences/Backward-Difference.tex}
+\input{../Module-1/Finite-Differences/Shift-Operator.tex}
+\input{../Module-1/Finite-Differences/Inverse-Operator.tex}

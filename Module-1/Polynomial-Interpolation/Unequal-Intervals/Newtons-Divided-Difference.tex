@@ -1,0 +1,55 @@
+\newpage
+\subsection{Newton's Divided Difference}
+
+\subsubsection{Formula}
+\[f(x) = f(x_0) + (x - x_0) \Delta f(x_0) + (x - x_0)(x - x_1) \Delta^2 f(x_0) + (x - x_0)(x - x_1)(x - x_2) \Delta^3 f(x_0) \cdots\]
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        $x$ & $f(x)$ & $\Delta f(x)$ & $\Delta^2 f(x)$ & $\Delta^3 f(x)$\\
+        \hline
+        $x_0$ & $a_0$ & & &\\
+        \hline
+        $x_1$ & $a_1$ & $\ \Delta f(x_1) = \frac{a_1 - a_0}{x_1 - x_0}$ & &\\
+        \hline
+        $x_2$ & $a_2$ & $ \Delta f(x_2) = \frac{a_2 - a_1}{x_2 - x_1}$ & $\Delta^2 f(x_1) = \frac{\Delta f(x_2) - \Delta f(x_1)}{x_2 - x_1}$ & \\
+        \hline
+        $x_3$ & $a_3$ & $\ \Delta f(x_3) = \frac{a_3 - a_2}{x_3 - x_2}$ & $\Delta^2 f(x_2) = \frac{\Delta f(x_3) - \Delta f(x_2)}{x_3 - x_2}$ & $\Delta^3 f(x_1) = \frac{\Delta^2 f(x_2) - \Delta^2 f(x_1)}{x_3 - x_2}$\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\mybox{Example : Find the value of $f(x)$ at $x = 10$ from the following table using Newton's Divided Difference Formula.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $x$ & 5 & 6 & 9 & 11 \\
+    \hline
+    $y$ & 12 & 13 & 14 & 16 \\
+    \hline
+\end{tabular}
+\end{center}
+
+Sol. :
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $x$ & $y$ & $\Delta y$ & $\Delta^2 y$ & $\Delta^3 y$ \\
+    \hline
+    5 & 12 & & & \\
+    \hline
+    6 & 13 & $\Delta y = \frac{13 - 12}{6 - 5} = 1$ & & \\
+    \hline
+    9 & 14 & $\Delta y = \frac{14 - 13}{9 - 6} = \frac{1}{3}$ & $\Delta^2 y = \frac{\frac{1}{3} - 1}{9 - 5} = -\frac{1}{6}$ & \\
+    \hline
+    11 & 16 & $\Delta y = \frac{16 - 14}{11 - 9} = 1$ & $\Delta^2 y = \frac{1 - \frac{1}{3}}{11 - 6} = \frac{1}{30}$ & $\Delta^3 y = \frac{\frac{1}{30} - \left(-\frac{1}{6}\right)}{11 - 5} = \frac{1}{60}$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+\[f(x) = 12 + (x - 5)(1) + (x - 5)(x - 6)(-0.222) + (x - 5)(x - 6)(x - 9)(0.09258)\]
+\[\Longrightarrow f(x) = 16.666\]
+}

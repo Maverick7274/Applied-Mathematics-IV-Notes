@@ -1,0 +1,57 @@
+
+
+\subsection{Forward Difference($\Delta$)}
+
+\begin{enumerate}
+  \item The forward difference is defined as the difference between the function values at two consecutive points.
+  \item The forward difference is denoted by $\Delta$.
+
+
+        \[\Delta y = y_1 - y_0\]
+        \[\Delta y_0 = f(a+h) - f(a)\]
+        \[\Delta y_1 = f(a+2h) - f(a+h)\]
+        \[\Delta y_2 = f(a+3h) - f(a+2h)\]
+        \[\Delta y_3 = f(a+4h) - f(a+3h)\]
+        \[\Delta y_n = f(a+(n+1)h) - f(a+nh)\]
+\end{enumerate}
+
+\subsubsection{$n^{th}$ Forward Difference($\Delta^n$)}
+
+\[\Delta^n(\Delta y_0) = \Delta^n(y_1 - y_0)\]
+$\therefore$ \[\Delta^n y_0 = \Delta^n y_1 - \Delta^n y_0\]
+
+\mybox{
+    Example : 
+    \[\Delta(\Delta y_0) = \Delta(y_1 - y_0)\]
+    \[\Delta^2 y_0 = \Delta y_1 - \Delta y_0\]
+}
+
+\subsubsection{Forward Difference Table}
+
+\begin{enumerate}
+  \item The forward difference table is a table that is used to calculate the forward difference of a function.
+\end{enumerate}
+
+
+% \begin{table}
+% \centering
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    $x$ & $y$ & $\Delta$ & $\Delta^2$ & $\Delta^3$ & $\Delta^4$ & $\Delta^5$\\
+    \hline
+    $a$ & $y_0$ & & & & &\\
+    \hline
+    $a + h$ & $y_1$ & $\Delta y_0$ & & & &\\
+    \hline
+    $a + 2h$ & $y_2$ & $\Delta y_1$ & $\Delta^2 y_0$ & & &\\
+    \hline
+    $a + 3h$ & $y_3$ & $\Delta y_2$ & $\Delta^2 y_1$ & $\Delta^3 y_0$ & &\\
+    \hline
+    $a + 4h$ & $y_4$ & $\Delta y_3$ & $\Delta^2 y_2$ & $\Delta^3 y_1$ & $\Delta^4 y_0$ &\\
+    \hline
+    $a + 5h$ & $y_5$ & $\Delta y_4$ & $\Delta^2 y_3$ & $\Delta^3 y_2$ & $\Delta^4 y_1$ & $\Delta^5 y_0$\\
+    \hline
+\end{tabular}
+\end{center}
+% \end{table}

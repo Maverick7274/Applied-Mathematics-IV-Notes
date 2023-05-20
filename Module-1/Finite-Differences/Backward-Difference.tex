@@ -1,0 +1,56 @@
+
+
+\subsection{Backward Difference($\nabla$)}
+
+\begin{enumerate}
+  \item The backward difference is defined as the difference between the function values at two consecutive points.
+  \item The backward difference is denoted by $\nabla$.
+
+  \[\nabla y = y_0 - {y}_{-1}\]
+  \[\nabla y_0 = f(a-h) - f(a)\]
+  \[\nabla y_1 = f(a-2h) - f(a-h)\]
+  \[\nabla y_2 = f(a-3h) - f(a-2h)\]
+  \[\nabla y_3 = f(-4h) - f(a-3h)\]
+  \[\nabla y_n = f(a-(n-1)h) - f(a-nh)\]
+
+\end{enumerate}
+
+\subsubsection{$n^{th}$ Backward Difference($\nabla^n$)}
+
+\[\nabla^n(\nabla y_0) = \nabla^n(y_0 - y_{-1})\]
+$\therefore$ \[\nabla^n y_0 = \nabla^n y_0 - \nabla^n y_{-1}\]
+
+\mybox{
+    Example : 
+    \[\nabla(\nabla y_0) = \nabla(y_0 - y_{-1})\]
+    \[\nabla^2 y_0 = \nabla y_0 - \nabla y_{-1}\]
+}
+
+\subsubsection{Backward Difference Table}
+
+\begin{enumerate}
+  \item The backward difference table is a table that is used to calculate the backward difference of a function.
+\end{enumerate}
+
+% \begin{table}
+% \centering
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    $x$ & $y$ & $\nabla$ & $\nabla^2$ & $\nabla^3$ & $\nabla^4$ & $\nabla^5$\\
+    \hline
+    $a - 5h$ & ${y}_{-5}$ & & & & &\\
+    \hline
+    $a - 4h$ & ${y}_{-4}$ & $\nabla {y}_{-4}$ & & & &\\
+    \hline
+    $a - 3h$ & ${y}_{-3}$ & $\nabla {y}_{-3}$ & $\nabla^2 {y}_{-3}$ & & &\\
+    \hline
+    $a - 2h$ & ${y}_{-2}$ & $\nabla {y}_{-2}$ & $\nabla^2 y_{-2}$ & $\nabla^3 y_{-2}$ & &\\
+    \hline
+    $a - 1h$ & ${y}_{-1}$ & $\nabla {y}_{-1}$ & $\nabla^2 y_{-1}$ & $\nabla^3 y_{-1}$ & $\nabla^4 {y}_{-1}$ &\\
+    \hline
+    $a$ & $y_0$ & $\nabla y_0$ & $\nabla^2 y_0$ & $\nabla^3 y_0$ & $\nabla^4 y_0$ & $\nabla^5 y_0$\\
+    \hline
+\end{tabular}
+\end{center}
+% \end{table}

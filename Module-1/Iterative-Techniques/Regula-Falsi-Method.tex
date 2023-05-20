@@ -1,0 +1,33 @@
+\newpage
+\chapter{Regula Falsi Method}
+
+
+
+\section{Reguli Falsi Method}
+
+\begin{enumerate}
+  \item Identify the interval $[a,b]$ that contains the root of the function $f(x)$. This means finding two points a and b such that $f(a)$ and $f(b)$ have opposite signs (i.e., $f(a) * f(b) < 0$). This interval can be obtained either graphically or algebraically.
+
+  \item Evaluate the function $f(a)$ and $f(b)$ at the endpoints a and b.
+  
+  \item Calculate the x-intercept of the straight line that connects the points $(a, f(a))$ and $(b, f(b))$. This x-intercept is given by the formula:
+  \begin{equation*}
+    c = a - \frac{f(a)(b - a)}{f(b) - f(a)}
+  \end{equation*}
+  
+  \item Evaluate the function $f(c)$ at the point c.
+  
+  \item If $f(c) = 0$, then $c$ is the root of the function and we are done.
+  
+  \item If $f(c)$ has the same sign as $f(a)$, then the root must lie in the interval $[c,b]$. So, set $a = c$ and go to step 2.
+  
+  \item If $f(c)$ has the same sign as $f(b)$, then the root must lie in the interval $[a,c]$. So, set $b = c$ and go to step 2.
+  
+  \item Repeat steps $2-7$ until you obtain an interval $[a,b]$ that is small enough or until $f(c)$ is sufficiently close to zero.
+  
+  \item The final value of c obtained is the approximate root of the function $f(x)$ within the interval $[a,b]$.
+  
+\mynote{The Regula Falsi method is a modified version of the Bolzano method that uses a linear approximation of the function to find the root. It also guarantees convergence to a root of the function as long as the function is continuous on the interval $[a,b]$. However, it may converge more slowly than the Bolzano method, especially for functions with steep slopes.}
+
+
+\end{enumerate}

@@ -1,4 +1,5 @@
 # Latex Specific
+./Output/[A.tex
 *.aux
 *.log
 *.out

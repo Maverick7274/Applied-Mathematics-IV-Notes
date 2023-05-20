@@ -1,0 +1,35 @@
+\newpage
+\chapter{Newton-Raphson Method}
+
+
+\section{Newton-Raphson Method}
+
+\begin{enumerate}
+\item Choose an initial guess $x_0$ for the root of the function $f(x)$.
+
+\item Calculate the derivative $f'(x)$ of the function $f(x)$.
+
+\item Evaluate the function $f(x)$ and its derivative $f'(x)$ at the initial guess $x_0$.
+
+\item Calculate the next approximation $x_1$ of the root using the formula:
+
+\begin{equation}
+  x_1 = x_0 - \frac{f(x_0)}{f'(x_0)}
+\end{equation}
+
+
+\item Evaluate the function $f(x)$ and its derivative $f'(x)$ at the new approximation $x_1$.
+
+\item Calculate the next approximation $x_2$ of the root using the formula:
+
+\begin{equation}
+    x_2 = x_1 - \frac{f(x_1)}{f'(x_1)}
+\end{equation}
+
+\item Repeat steps $5-6$ until you obtain an approximation $x_i$ that is sufficiently close to the root or until the maximum number of iterations is reached.
+
+\item The final value of $x_i$ obtained is the approximate root of the function $f(x)$.
+
+\mynote{The Newton-Raphson method can converge faster than the Bolzano and Regula Falsi methods for functions with well-behaved derivatives. However, it requires an initial guess that is sufficiently close to the root and may fail to converge or converge to a different root if the function has multiple roots or if the derivative changes sign near the root.}
+
+\end{enumerate}

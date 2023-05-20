@@ -1,0 +1,113 @@
+\documentclass{article}
+
+\setcounter{tocdepth}{8}
+
+\setcounter{secnumdepth}{8}
+
+\usepackage{amsmath}
+
+\usepackage{blindtext}
+
+\usepackage{titlesec}
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{amssymb}
+
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linktoc=all,
+    linkcolor=black,
+}
+
+\usepackage[most]{tcolorbox}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\clearpage
+
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\Huge}
+
+
+
+\makeatletter
+\NewDocumentCommand{\mynote}{+O{}+m}{%
+  \begingroup
+  \tcbset{%
+    noteshift/.store in=\mynote@shift,
+    noteshift=1.5cm
+  }
+  \begin{tcolorbox}[
+    nobeforeafter,
+    enhanced,
+    sharp corners,
+    toprule=1pt,
+    bottomrule=1pt,
+    leftrule=0pt,
+    rightrule=0pt,
+    colback=yellow!20,
+    #1,
+    left skip=\mynote@shift,
+    right skip=\mynote@shift,
+    overlay={\node[right] (mynotenode) at ([xshift=-\mynote@shift]frame.west) {\textbf{NOTE:}};},
+]
+    #2
+  \end{tcolorbox}
+  \endgroup
+  }
+
+  \NewDocumentCommand{\mybox}{+O{}+m}{%
+  \begingroup
+  \tcbset{%
+    noteshift/.store in=\mynote@shift,
+    noteshift=1.5cm
+  }
+  \begin{tcolorbox}[
+    nobeforeafter,
+    enhanced,
+    sharp corners,
+    toprule=1pt,
+    bottomrule=1pt,
+    leftrule=1pt,
+    rightrule=1pt,
+    colback=gray!40,
+    #1,
+    left skip=\mynote@shift,
+    right skip=\mynote@shift,
+    % overlay={\node[right] (mynotenode) at ([xshift=-\mynote@shift]frame.west) {\textbf{NOTE:}};},
+]
+    #2
+  \end{tcolorbox}
+  \endgroup
+  }
+\makeatother
+
+% \title{Iterative Techniques and Interpolation}
+% \date{}
+% \author{Neelanjan Mukherji}
+
+
+\begin{document}
+
+% \maketitle
+
+\tableofcontents
+
+
+
+
+\input{./Module-1/Iterative-Techniques/Bisection-Method.tex}
+\input{./Module-1/Iterative-Techniques/Regula-Falsi-Method.tex}
+\input{./Module-1/Iterative-Techniques/Newton-Raphson-Method.tex}
+\input{./Module-1/Iterative-Techniques/Jacobi-Iteration-Method.tex}
+\input{./Module-1/Iterative-Techniques/Gauss-Seidel-Iterative-Method.tex}
+\input{./Module-1/Finite-Differences/Finite-Differences.tex}
+\input{./Module-1/Polynomial-Interpolation/Polynomial-Interpolation.tex}
+
+
+
+
+\end{document}

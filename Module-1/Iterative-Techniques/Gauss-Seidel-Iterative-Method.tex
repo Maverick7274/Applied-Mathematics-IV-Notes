@@ -1,0 +1,67 @@
+\newpage
+\chapter{Gauss-Seidel Iteration Method}
+
+\section{Gauss-Seidel Iteration Method}
+
+\begin{enumerate}
+
+    \item This method is applicable to the system of equation in which leading diagonal elements of co-effcient matrix are dominant(large in magnitude) in their respective rows.
+  
+    \item The system of equations is written in the form :
+    \begin{equation*}
+      a_{11}x + a_{12}y + a_{13}z = b_1
+    \end{equation*}
+    \begin{equation*}
+      a_{21}x + a_{22}y + a_{23}z = b_2
+    \end{equation*}
+    \begin{equation*}
+      a_{31}x + a_{32}y + a_{33}z = b_3
+    \end{equation*}
+  
+    \mynote{
+      Diagonal dominance property must be satisfied :
+    
+      \begin{equation*}
+        |a_{11}| > |a_{12}| + |a_{13}|
+      \end{equation*}
+      \begin{equation*}
+        |a_{22}| > |a_{21}| + |a_{23}|
+      \end{equation*}
+      \begin{equation*}
+        |a_{33}| > |a_{31}| + |a_{32}|
+      \end{equation*}  
+    }
+  
+    \item Rewriting the equations for $x, y, z$ respectively :
+    \begin{equation*}
+      x = \frac{1}{a_{11}}(b_1 - a_{12}y - a_{13}z)
+    \end{equation*}
+    \begin{equation*}
+      y = \frac{1}{a_{22}}(b_2 - a_{21}x - a_{23}z)
+    \end{equation*}
+    \begin{equation*}
+      z = \frac{1}{a_{33}}(b_3 - a_{31}x - a_{32}y)
+    \end{equation*}
+  
+    \item To solve the system of equations, we start with initial guesses for $x, y, z$.
+  
+    \begin {equation*}
+      x_0 = 0, y_0 = 0, z_0 = 0
+    \end{equation*}
+  
+    \item  Then we use the above equations to calculate the values of $x, y, z$.
+  
+    \begin{equation*}
+      x = \frac{1}{a_{11}}(b_1 - a_{12}y_0 - a_{13}z_0)
+    \end{equation*}
+    \begin{equation*}
+      y = \frac{1}{a_{22}}(b_2 - a_{21}x_0 - a_{23}z_0)
+    \end{equation*}
+    \begin{equation*}
+      z = \frac{1}{a_{33}}(b_3 - a_{31}x_0 - a_{32}y_0)
+    \end{equation*}
+
+\mynote[noteshift=1.5cm,colback=orange!40]{To calculate the values we use the updated values of $x, y, z$ as soon as they are calculated.}
+
+\end{enumerate}
+  
