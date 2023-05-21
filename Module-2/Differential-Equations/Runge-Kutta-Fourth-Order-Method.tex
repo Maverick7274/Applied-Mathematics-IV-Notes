@@ -1,0 +1,53 @@
+\subsection{Runge-Kutta $4^{th}$ Order Method}
+
+\subsubsection{Formula}
+
+\[k_1 = hf(x_n, y_n)\]
+\[k_2 = hf(x_n + \frac{h}{2}, y_n + \frac{k_1}{2})\]
+\[k_3 = hf(x_n + \frac{h}{2}, y_n + \frac{k_2}{2})\]
+\[k_4 = hf(x_n + h, y_n + k_3)\]
+\[k = \frac{1}{6} \left(k_1 + 2k_2 + 2k_3 + k_4\right)\]
+
+\subsubsection{Runge-Kutta $4^{th}$ Order Method}
+
+\begin{align*}
+    {y}_{n+1} &= y_n + k\\
+    &= y_n + \frac{1}{6} \left(k_1 + 2k_2 + 2k_3 + k_4\right)
+\end{align*}
+
+% \mybox{Example:
+
+% \begin{align*}
+%     \frac{dy}{dx} &= x + y\\
+%     y(0) &= 1\\
+%     h &= 0.1\\
+%     x_0 &= 0\\
+%     x_1 &= 0.1\\
+%     x_2 &= 0.2\\
+%     x_3 &= 0.3\\
+%     x_4 &= 0.4\\
+%     x_5 &= 0.5\\
+%     x_6 &= 0.6\\
+%     x_7 &= 0.7\\
+%     x_8 &= 0.8\\
+%     x_9 &= 0.9\\
+%     x_{10} &= 1.0\\
+% \end{align*}
+
+% \begin{align*}
+%     k_1 &= hf(x_n, y_n)\\
+%     k_1 &= 0.1(0 + 1)\\
+%     k_1 &= 0.1\\
+%     k_2 &= hf(x_n + \frac{h}{2}, y_n + \frac{k_1}{2})\\
+%     k_2 &= 0.1(0 + \frac{0.1}{2})\\
+%     k_2 &= 0.005\\
+%     k_3 &= hf(x_n + \frac{h}{2}, y_n + \frac{k_2}{2})\\
+%     k_3 &= 0.1(0 + \frac{0.005}{2})\\
+%     k_3 &= 0.00025\\
+%     k_4 &= hf(x_n + h, y_n + k_3)\\
+%     k_4 &= 0.1(0 + 0.00025)\\
+%     k_4 &= 0.000025\\
+%     y_{n+1} &= y_n + \frac{1}{6} \left(k_1 + 2k_2 + 2k_3 + k_4\right)\\
+%     y_{n+1} &= 1 + \frac{1}{6} \left(0.1 + 2(0.005) + 2(0.00025) + 0.000025\right)\\
+%     y_{n+1} &= 1.0167\\
+% \end{align*}}
